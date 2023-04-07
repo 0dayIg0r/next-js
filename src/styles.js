@@ -22,6 +22,6 @@ export const Title = styled.a`
 `;
 
 export const Welcome = styled.h1`
-  font-size: ${props => `#${props.width}px`};
-  color: ${(props) => `#${props.cor}`};
+  font-size: ${(props) => `${props.width}px`};
+  color: ${(props) => `${props.color}`};
 `;

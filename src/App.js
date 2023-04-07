@@ -9,8 +9,8 @@ const App = () => {
         <S.Title>Projeto Styled</S.Title>
       </S.Head>
 
-      <S.Welcome cor="#00FF00" width={2}>
-        BEM VINDO AO SISTEMA
+      <S.Welcome color={'#FF00FF'} width={36}>
+        BEM VINDO
       </S.Welcome>
     </S.Container>
   );
