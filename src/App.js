@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React from "react";
 
-import RoutesR from './routes'
-import Header from './components/Header'
-
+import * as S from "./styles";
 
 const App = () => {
   return (
-    <RoutesR />
-  )
-}
+    <S.Container>
+      <S.Head>
+        <S.Title>Projeto Styled</S.Title>
+      </S.Head>
 
-export default App
+      <S.Welcome cor="#00FF00" width={2}>
+        BEM VINDO AO SISTEMA
+      </S.Welcome>
+    </S.Container>
+  );
+};
+
+export default App;
