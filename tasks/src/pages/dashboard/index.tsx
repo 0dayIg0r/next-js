@@ -1,15 +1,34 @@
-import styles from './styles.module.css'
-import Head from 'next/head'
+import { GetServerSideProps } from "next";
+import styles from "./styles.module.css";
+import Head from "next/head";
 
-export default function Dashboard(){
+import { getSession } from "next-auth/react";
 
-    return(
-        <div className={styles.container}>
-            <Head>
-                <title>Painel de tarefas</title>
-            </Head>
+export default function Dashboard() {
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Painel de tarefas</title>
+      </Head>
 
-            <h1>Pagina Painel</h1>
-        </div>
-    )
+      <h1>Pagina Painel</h1>
+    </div>
+  );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const session = await getSession({ req });
+
+  if (!session?.user) {
+  
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+};
