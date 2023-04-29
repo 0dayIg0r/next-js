@@ -4,3 +4,5 @@ GOOGLE_CLIENT_SECRET =
 NEXTAUTH_URL = http://localhost:3000
 
 JWT_SECRET = md5 versace
+
+NEXT_PUBLIC_URL = url do site/algo/`${id}`
